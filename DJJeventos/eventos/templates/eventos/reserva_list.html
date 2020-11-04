@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Listado de Reservas</title>
+  <title>Formulario para cotizaciones</title>
   <meta charset="utf-8">
   {% load static %}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,7 +16,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
 </head>
-
 {% load static %}
    <style>
 
@@ -92,23 +91,28 @@
       color: rgb(255, 255, 255);
       border-bottom-color: brown;
       width: 100%;
-
    }
-
   </style>
 
   <body>
+    <br><br><br><br><br><br><br><br><br>
 
-  <h1>Reserva: {{ Reserva.codigo_reserva }}</h1>
+    <h1>Listado de Reservas</h1>
 
-  <p><strong>fecha_evento:</strong> {{ reserva.fecha_evento }}</p> 
-  <p><strong>nom_cliente:</strong> {{ reserva.nom_cliente }}</p>
-  <p><strong>apell_cliente:</strong> {{ reserva.apell_cliente }}</p> 
-  <p><strong>celu_cliente:</strong> {{ reserva.celu_cliente }}</p>  
-  <p><strong>email:</strong> {{ reserva.email }}</p> 
-  <p><strong>cant_personas:</strong> {{ reserva.cant_personas }}</p> 
-  <p><strong>total:</strong> {{ reserva.totale }}</p> 
+    {% if reserva_list %}
+    <ul>
 
+      {% for reserva in reserva_list %}
+      <li>
+        <a href="{{ reserva.get_absolute_url }}">{{ reserva.codigo_reserva }}</a> {{ reserva.fecha_evento }} ({{reserva.total}})
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>No hay reservas</p>
+    {% endif %} 
   </body>
   
 </html>

@@ -46,8 +46,11 @@ def reservas(request):
     return render(
         request,
         'reservas.html',
-      
     )
+
+
+
+
 
 class reservaCreate(CreateView):
     model = reserva
@@ -60,11 +63,18 @@ class reservaUpdate(UpdateView):
 
 class reservaDelete(DeleteView):
     model = reserva
-    sucess_url = reverse_lazy('reservas')
+    sucess_url = reverse_lazy('index')
 
 
 class reservaDetailView(generic.DetailView):
-    model=reserva
+    model = reserva
+
+class ReservaListView(generic.ListView):
+    model = reserva
+    paginate_by = 10
+
+class ReservaDetailView(generic.DetailView):
+    model = reserva
     
     
 
