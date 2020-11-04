@@ -57,9 +57,9 @@
 
    
     #cotizar{
-      background-color: rgb(255, 255, 255);
-   color: rgb(209, 0, 0);
-   color-adjust: rgb(255, 255, 255) ;
+    background-color: rgb(255, 255, 255);
+    color: rgb(209, 0, 0);
+    color-adjust: rgb(255, 255, 255) ;
 
     }
    
@@ -84,13 +84,15 @@
 
     hr{  
      background-color: rgb(255, 0, 0);
-   }
+    }
 
-   #boton {
-    background-color: rgb(255, 0, 0);
-      color: rgb(255, 255, 255);
-      border-bottom-color: brown;
-      width: 100%;
+    button {
+    text-align: center;
+    background-color: rgb(247, 242, 242);
+    color: rgb(247, 8, 8);
+    border-bottom-color: brown;
+    width: 100%;
+    
       
 
 
@@ -101,13 +103,30 @@
 
   </style>
   <body>
-  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br>
     
-      <button>
-        
-        <a  id="boton" href="{% url 'eventos' %}" >crear</a>
-      </button>
+  <ul class="navbar-nav ml-auto" >
+
+      <li class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  id="colorletras" href="{% url 'reserva_create' %}">Crear Reserva</a>
+      </li>
+      <hr>
+      <li class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  id="colorletras" href="{% url 'index' %}">Editar Reserva</a>
+      </li>
+      <hr>
+      <li class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  id="colorletras" href="{% url 'index' %}">Eliminar Reserva</a>
+      </li>
+      
+
+  </ul>
+  <br><br><br><br>
+
+  
+
     </body>
+    
 
 
    

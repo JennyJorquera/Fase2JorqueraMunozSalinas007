@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Listado Reservas</h1>
+
+    {% if reserva_list %}
+    <ul>
+
+      {% for reserva in reserva_list %}
+      <li>
+        <a href="{{ reserva.get_absolute_url }}">{{ reserva}}</a> ({{reserva}})
+      </li>
+      {% endfor %}
+
+    </ul>
+
+    {% else %}
+      <p>No hay reservas</p>
+    {% endif %}       
+{% endblock %}

@@ -1,0 +1,17 @@
+
+{%block content%}
+
+<h1>reserva: {{reserva}}</h1>
+
+
+<div style="margin-left:20px;margin-top:20px">
+<h4>reserva</h4>
+    <dl>
+       
+            <dt><a href="{%url 'reserva_detail' reserva.pk %}">{{reserva}}</a>
+               
+        {%endfor%}    
+
+    </dl>
+</div>
+{%endblock%}
