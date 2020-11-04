@@ -68,7 +68,7 @@ class reservaDelete(DeleteView):
 
 class reservaDetailView(generic.DetailView):
     model = reserva
-<<<<<<< HEAD
+
 
 class ReservaListView(generic.ListView):
     model = reserva
@@ -76,8 +76,6 @@ class ReservaListView(generic.ListView):
 
 class ReservaDetailView(generic.DetailView):
     model = reserva
-=======
->>>>>>> 2d51cc88ab6a778c62b10b1a81bf78a50e1be45d
     
     
 
