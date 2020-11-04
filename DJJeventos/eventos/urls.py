@@ -9,8 +9,11 @@ urlpatterns = [
     path('cotizacion/', views.cotizacion, name='cotizacion'),
     path('descEventos/', views.descEventos, name='descEventos'),
     path('reservas/', views.reservas, name='reservas'),
+<<<<<<< HEAD
     path('listado/', views.ReservaListView.as_view(), name ='listado'),
     path('reserva/<int:pk>', views.ReservaDetailView.as_view(), name='reserva_detail')
+=======
+>>>>>>> 2d51cc88ab6a778c62b10b1a81bf78a50e1be45d
 ]
 
 urlpatterns += [

@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html>
@@ -98,13 +99,20 @@
     <br><br><br><br><br><br><br><br><br>
 
     <h1>Listado de Reservas</h1>
+=======
+    <h1>Listado Reservas</h1>
+>>>>>>> 2d51cc88ab6a778c62b10b1a81bf78a50e1be45d
 
     {% if reserva_list %}
     <ul>
 
       {% for reserva in reserva_list %}
       <li>
+<<<<<<< HEAD
         <a href="{{ reserva.get_absolute_url }}">{{ reserva.codigo_reserva }}</a> {{ reserva.fecha_evento }} ({{reserva.total}})
+=======
+        <a href="{{ reserva.get_absolute_url }}">{{ reserva}}</a> ({{reserva}})
+>>>>>>> 2d51cc88ab6a778c62b10b1a81bf78a50e1be45d
       </li>
       {% endfor %}
 
@@ -112,8 +120,12 @@
 
     {% else %}
       <p>No hay reservas</p>
+<<<<<<< HEAD
     {% endif %} 
   </body>
   
 </html>
+=======
+    {% endif %}       
+>>>>>>> 2d51cc88ab6a778c62b10b1a81bf78a50e1be45d
 {% endblock %}
